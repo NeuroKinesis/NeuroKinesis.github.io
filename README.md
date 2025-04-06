@@ -1,110 +1,135 @@
-# Repository Template  
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Git conventions to follow for working on the project  
+## Getting Started
 
-Source (in french): [conventions_git.docx](https://epitechfr-my.sharepoint.com/:w:/r/personal/arthur_lefrancois_epitech_eu/_layouts/15/Doc.aspx?sourcedoc=%7BFAF1372D-4F0E-48FB-853C-8E1A11E3B0F0%7D&file=proposition_conventions_git.docx&action=default&mobileredirect=true).  
+First, run the development server:
 
-### Architecture and release  
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-There are three types of branches:  
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-* **Task branches**: detailed below.  
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-* **Main**: corresponds to the production version if necessary, otherwise to the development version.  
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-* **Dev**: present only if a production version exists; it helps avoid critical changes on the main branch, which is sensitive.  
+## Learn More
 
-### Branch creation  
+To learn more about Next.js, take a look at the following resources:
 
-The branch should be created from the dev branch if present, otherwise from the main branch.  
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-The branch title must follow this convention:  
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-#### Basic rules  
+## Deploy on Vercel
 
-1. Do not use accents (this causes Jira integration issues).  
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-2. Replace spaces with underscores ‘_’.  
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-3. Follow this structure: `{prefix}/{Jira card ID}-{card title}`.  
+# Repository Template
 
-4. Do not use double dashes (‘__’ or ‘--‘).  
+## Git conventions to follow for working on the project
 
-5. Do not end the branch title with a dash.  
+Source (in french): [conventions_git.docx](https://epitechfr-my.sharepoint.com/:w:/r/personal/arthur_lefrancois_epitech_eu/_layouts/15/Doc.aspx?sourcedoc=%7BFAF1372D-4F0E-48FB-853C-8E1A11E3B0F0%7D&file=proposition_conventions_git.docx&action=default&mobileredirect=true).
 
-#### Prefixes  
+### Architecture and release
 
-**feat**: for new features.  
+There are three types of branches:
 
-**fix**: for bug fixes.  
+- **Task branches**: detailed below.
 
-**docs**: for documentation.  
+- **Main**: corresponds to the production version if necessary, otherwise to the development version.
 
-**tests**: for tests.  
+- **Dev**: present only if a production version exists; it helps avoid critical changes on the main branch, which is sensitive.
 
-**other**: for exceptions.  
+### Branch creation
 
-If the branch includes an environment modification (such as adding a new library) that requires action from other developers (installing the new library), please add a ‘!’ at the end of the prefix.  
+The branch should be created from the dev branch if present, otherwise from the main branch.
 
-### Commits  
+The branch title must follow this convention:
 
-There is no strict naming convention for commits, just make sure they are clear.  
+#### Basic rules
 
-### Development pull requests  
+1. Do not use accents (this causes Jira integration issues).
 
-#### Creation  
+2. Replace spaces with underscores ‘\_’.
 
-You can create a pull request in ‘draft’ status as soon as the branch is created, or wait until the task is complete to create a pull request in ‘ready’ status.  
+3. Follow this structure: `{prefix}/{Jira card ID}-{card title}`.
 
-The title of a pull request must follow the same name as the branch (except underscores ‘_’ can be replaced with spaces).  
+4. Do not use double dashes (‘\_\_’ or ‘--‘).
+
+5. Do not end the branch title with a dash.
+
+#### Prefixes
+
+**feat**: for new features.
+
+**fix**: for bug fixes.
+
+**docs**: for documentation.
+
+**tests**: for tests.
+
+**other**: for exceptions.
+
+If the branch includes an environment modification (such as adding a new library) that requires action from other developers (installing the new library), please add a ‘!’ at the end of the prefix.
+
+### Commits
+
+There is no strict naming convention for commits, just make sure they are clear.
+
+### Development pull requests
+
+#### Creation
+
+You can create a pull request in ‘draft’ status as soon as the branch is created, or wait until the task is complete to create a pull request in ‘ready’ status.
+
+The title of a pull request must follow the same name as the branch (except underscores ‘\_’ can be replaced with spaces).
 
 [!WARNING]
-(! If your branch contains only one commit, the pull request will not automatically take the branch name!)  
+(! If your branch contains only one commit, the pull request will not automatically take the branch name!)
 
-For a pull request to be in ‘ready’ status, several conditions must be met:  
+For a pull request to be in ‘ready’ status, several conditions must be met:
 
-1. The task is fully completed.  
+1. The task is fully completed.
 
-2. The developed code is correctly formatted.  
+2. The developed code is correctly formatted.
 
-3. The code passes the tests.  
+3. The code passes the tests.
 
-4. The code is rebased onto *dev* (or *main* if *dev* does not exist) (no merge).  
+4. The code is rebased onto _dev_ (or _main_ if _dev_ does not exist) (no merge).
 
 [!TIP]
-A tutorial on rebasing a branch is available here: [Git rebase | Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase).  
+A tutorial on rebasing a branch is available here: [Git rebase | Atlassian Git Tutorial](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase).
 
-#### Description  
+#### Description
 
 [!IMPORTANT]
-If a pull request template is available, please follow it.  
+If a pull request template is available, please follow it.
 
-#### Merge  
+#### Merge
 
-A pull request can only be merged after approval by another developer and must be squashed (squash & merge). The merge description must be CLEAR AND PRECISE.  
+A pull request can only be merged after approval by another developer and must be squashed (squash & merge). The merge description must be CLEAR AND PRECISE.
 
-After merging the branch, the Jira card can be marked as ‘done’.  
+After merging the branch, the Jira card can be marked as ‘done’.
 
-### Production pull requests  
+### Production pull requests
 
-They follow the same pattern as development pull requests, except that the name of the pull request corresponds to the release version name.  
+They follow the same pattern as development pull requests, except that the name of the pull request corresponds to the release version name.
 
-Production pull requests are always made from dev to main.  
+Production pull requests are always made from dev to main.
 
-### Jira card exceptions  
+### Jira card exceptions
 
-In rare cases, a branch can be created without a Jira card (minor formatting fixes, variable renaming, etc.). In this case, use the ‘other’ prefix in the branch name (without specifying a Jira card). All other rules still apply.  
+In rare cases, a branch can be created without a Jira card (minor formatting fixes, variable renaming, etc.). In this case, use the ‘other’ prefix in the branch name (without specifying a Jira card). All other rules still apply.
 
-#### Example branch names  
-
-`feat!/scrum-99_icons_in_frontend`  
-
-This follows the format where `feat` indicates a new feature, and `!` warns other developers of a required action (e.g., installing a new library for icons in this case), which should be specified in the squash & merge description.  
-
-`scrum-99` corresponds to the Jira card ID, and `_icons_in_frontend` is a clear and precise title.  
-
-`other/remove_lint_error`  
-
-With a description like (‘Variable not reassigned, unnecessary use of ‘let’).  
-
-In this case, creating a Jira ticket is unnecessary. A branch with the `other` prefix, along with a clear title and description, is sufficient.  
+#### Example branch names
